@@ -1,15 +1,19 @@
 from .models import Post
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
+from django.http import HttpRequest
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-# Create your views here.
+#  Create your views here.
 
 
-class HomeView(ListView):
+class HomeView(LoginRequiredMixin,ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
+    def get_queryset(self):
+        return Post.objects.filter(author=self.request.user)
 
 
 class PostDetailView(DetailView):

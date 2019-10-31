@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'accounts',
+    'crispy_forms', #3rd Party App. Best way to have Django DRY forms
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,4 @@ LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'blog:home'
 LOGOUT_REDIRECT_URL = 'blog:home'
 AUTH_USER_MODEL = 'accounts.CustomUser'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
