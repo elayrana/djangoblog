@@ -6,7 +6,7 @@ from django.urls import reverse
 class Post(models.Model):
     title = models.TextField(max_length=200)
     author = models.ForeignKey(
-        'auth.User', on_delete=models.CASCADE,
+        'accounts.CustomUser', on_delete=models.CASCADE,
     )
     body = models.TextField()
 

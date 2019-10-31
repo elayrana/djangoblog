@@ -1,36 +1,47 @@
 /* static/css/base.css */
 
-header {
-    background-color: blueviolet;
-    border-bottom: 2px solid #999;
-    margin-bottom: 2rem;
-    display:flex
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
-body {font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;text-align: center;
-    }
-    .nav-left {
-    margin-right: auto;
-    }
-    .nav-right {
-    display: flex;
-    padding-top: 2rem;
-    }
-    .post-entry {
-    margin-bottom: 2rem;
-    }
-    .post-entry h2 {
-    margin: 0.5rem 0;
-    }
-    .post-entry h2 a,
-    .post-entry h2 a:visited {
-    color: greenyellow;
+a{
     text-decoration: none;
-    }
-    .post-entry p {
-    margin: 0;
-    font-weight: 400;
-    }
-    .post-entry h2 a:hover {
-    color: red;
-    }
+}
+.container li{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.newpost{
+    padding-top: 5px;
+    padding-right: 5px;
+    align-self: baseline;
+    text-align: right;
+}
+.posts{
+    font-size: 20px;
+    text-align: left;
+    height: 50%;
+}
+.posts ul{
+    padding-top: 30px;
+}
+.container {
+    background-color: aqua;
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.content{
+    border-left: 2px solid lightgrey;
+    border-right: 2px solid lightgray;
+    margin: 30px auto;
+    width: 50%;
+}
+.content-right{
+    margin-left: auto;
+
+}
