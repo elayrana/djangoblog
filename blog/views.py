@@ -15,7 +15,6 @@ class HomeView(LoginRequiredMixin,ListView):
     def get_queryset(self):
         return Post.objects.filter(author=self.request.user)
 
-
 class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/post.html'
