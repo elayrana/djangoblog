@@ -128,3 +128,12 @@ LOGIN_REDIRECT_URL = 'blog:home'
 LOGOUT_REDIRECT_URL = 'blog:home'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# newspaper_project/settings.py
+EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+SENDGRID_API_KEY = os.getenv('EMAIL_PASS')
+#EMAIL_PORT = 587
+#EMAIL_HOST = 'smtp.sendgrid.com'
+#EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False
+#EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+#EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
